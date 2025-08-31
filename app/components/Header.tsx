@@ -10,8 +10,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <div className="flex items-center space-x-3">
-            <Logo />
-            <span className="text-2xl font-bold text-gray-900 tracking-tight">STEPTIONS</span>
+            <Logo className="w-16 h-16" />
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-gray-900 tracking-tight">STEPTIONS</span>
+              <span className="text-xs text-gray-500 -mt-1">by Decenzio</span>
+            </div>
           </div>
 
           {/* Navigation */}

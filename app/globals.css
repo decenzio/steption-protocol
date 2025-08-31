@@ -37,33 +37,20 @@
   --border: var(--blue-200);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  :root {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', 'Courier New', monospace;
 
-  /* Custom color extensions */
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-neutral: var(--neutral);
-  --color-border: var(--border);
-
-  /* Accordion animations */
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-
-  /* Keyframes for accordion */
-  --keyframes-accordion-down: {
-    from { height: 0; }
-    to { height: var(--radix-accordion-content-height); }
-  };
-  
-  --keyframes-accordion-up: {
-    from { height: var(--radix-accordion-content-height); }
-    to { height: 0; }
-  };
+    /* Custom color extensions */
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-accent: var(--accent);
+    --color-neutral: var(--neutral);
+    --color-border: var(--border);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,14 +68,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Use Geist Mono for code elements */
+/* Use system monospace for code elements */
 code, pre {
-  font-family: var(--font-geist-mono), 'Courier New', monospace;
+  font-family: var(--font-mono);
 }
 
 .container {
