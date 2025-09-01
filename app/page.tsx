@@ -229,11 +229,6 @@ export default function LandingPage() {
       <section id="how-it-works" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-yellow-400">
-                How It Works
-              </span>
-            </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
               Three Simple Steps to Get Started
             </h2>
@@ -367,11 +362,6 @@ export default function LandingPage() {
       <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
-            <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-yellow-400">
-                FAQ
-              </span>
-            </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
               Frequently Asked Questions
             </h2>
@@ -413,20 +403,18 @@ export default function LandingPage() {
       <section id="team" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-yellow-400">
-                Our Foundation
-              </span>
-            </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-              Backed by{" "}
-              <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-                Decenzio
-              </span>
+              Powered by
             </h2>
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/DCNZ_Primary-Logo_Black.svg" 
+                alt="Decenzio Logo" 
+                className="h-16 w-auto"
+              />
+            </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Forward-thinking Web3 house backed by execution driven builders committed to 
-              advancing the Stellar ecosystem
+              Forward-thinking Web3 house backed by execution driven builders
             </p>
           </div>
           
@@ -435,7 +423,7 @@ export default function LandingPage() {
             <div className="p-8 text-center">
               <div className="w-48 h-48 flex items-center justify-center mx-auto mb-6">
                 <img 
-                  src="/decenzioLogo.png" 
+                  src="/DCNZ_Primary-Logo_Black.svg" 
                   alt="Decenzio Logo" 
                   className="w-full h-full object-contain"
                 />
@@ -754,7 +742,7 @@ export default function LandingPage() {
               <div className="flex items-center mb-6">
                 <div className="w-24 h-24 mr-4">
                   <img 
-                    src="/decenzioLogo.png" 
+                    src="/DCNZ_Primary-Logo_Black.svg" 
                     alt="Decenzio Logo" 
                     className="w-full h-full object-contain"
                   />
