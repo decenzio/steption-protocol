@@ -58,49 +58,59 @@ export default function LandingPage() {
     <div className="bg-white text-gray-900 font-sans">
       <Header />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 min-h-screen flex items-center">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="text-center">
             <div className="mb-8">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-white/20 backdrop-blur-sm">
                 Built on Stellar Network
               </span>
             </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-10 leading-tight tracking-tight">
               The First Options Protocol on{" "}
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-400 bg-clip-text text-transparent">
                 Stellar
               </span>
             </h1>
-            <p className="text-2xl lg:text-3xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-3xl lg:text-4xl text-blue-100 mb-16 max-w-5xl mx-auto leading-relaxed font-light">
               Insure any asset. Hedge price risk. Earn yield.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20">
               <Link href="/app">
-                <Button size="lg" className="bg-white text-yellow-700 hover:bg-yellow-50 px-10 py-4 text-lg font-semibold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
+                <Button size="xl" className="bg-white text-yellow-700 hover:bg-yellow-50 px-12 py-6 text-xl font-semibold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
                   Launch Application
                 </Button>
               </Link>
-              <Button size="lg" className="border-2 border-white/70 text-white hover:bg-white hover:text-yellow-700 px-10 py-4 text-lg font-semibold bg-transparent backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+              <Button size="xl" className="border-2 border-white/70 text-white hover:bg-white hover:text-yellow-700 px-12 py-6 text-xl font-semibold bg-transparent backdrop-blur-sm hover:shadow-xl transition-all duration-300">
                 View Documentation
               </Button>
             </div>
             
             {/* Trust Indicators */}
-            <div className="mt-16 pt-8 border-t border-white/20">
-              <p className="text-blue-200 text-sm font-medium mb-4">Trusted by Web3 Professionals</p>
-              <div className="flex justify-center items-center space-x-8 opacity-60">
-                <div className="text-white/70 text-sm font-medium">Stellar Network</div>
-                <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-                <div className="text-white/70 text-sm font-medium">Smart Contracts</div>
-                <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-                <div className="text-white/70 text-sm font-medium">Decentralized</div>
+            <div className="pt-12 border-t border-white/20">
+              <p className="text-blue-200 text-lg font-medium mb-6">Trusted by Web3 Professionals</p>
+              <div className="flex justify-center items-center space-x-10 opacity-70">
+                <div className="text-white/80 text-lg font-medium">Stellar Network</div>
+                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                <div className="text-white/80 text-lg font-medium">Soroban Smart Contracts</div>
+                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                <div className="text-white/80 text-lg font-medium">Decentralized</div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="flex flex-col items-center text-white/60 hover:text-white/80 transition-colors cursor-pointer">
+            <span className="text-sm font-medium mb-2">Scroll to explore</span>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </div>
         </div>
       </section>
@@ -110,11 +120,6 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="mb-6">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-yellow-400">
-                  About STEPTIONS
-                </span>
-              </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
                 Professional Options Trading on{" "}
                 <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
