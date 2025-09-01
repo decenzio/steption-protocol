@@ -58,7 +58,7 @@ export default function LandingPage() {
     <div className="bg-white text-gray-900 font-sans">
       <Header />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 min-h-screen flex items-center">
+      <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 min-h-screen flex items-center">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
@@ -359,7 +359,7 @@ export default function LandingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="faq" className="py-32 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
@@ -392,9 +392,11 @@ export default function LandingPage() {
           <div className="text-center mt-16 p-8 bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-2xl border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h3>
             <p className="text-gray-600 mb-6">Our team is here to help you get started with options trading on Stellar.</p>
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 font-semibold">
-              Contact Support
-            </Button>
+            <a href="mailto:hello@decenzio.com">
+              <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 font-semibold">
+                Contact Support
+              </Button>
+            </a>
           </div>
         </div>
       </section>
