@@ -531,7 +531,7 @@ export default function LandingPage() {
           {/* Contact & Social Media */}
           <div className="border-t border-gray-200 pt-16">
             <h3 className="text-2xl font-bold text-center mb-12 text-gray-900">Connect With Us</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="max-w-md mx-auto space-y-4">
               {/* Email Contact */}
               <Card className="group hover:shadow-lg transition-all duration-300 cursor-pointer border border-gray-200">
                 <CardContent className="p-6">
@@ -554,11 +554,11 @@ export default function LandingPage() {
                         />
                       </svg>
                     </div>
-                    <div className="text-left min-w-0 flex-1">
+                    <div className="text-left">
                       <div className="font-semibold text-gray-900 text-base group-hover:text-yellow-500">
                         Email Us
                       </div>
-                      <div className="text-gray-600 text-xs break-all">
+                      <div className="text-gray-600 text-sm">
                         hello@decenzio.com
                       </div>
                     </div>
@@ -603,7 +603,7 @@ export default function LandingPage() {
                     rel="noopener noreferrer"
                     className="flex items-center space-x-4"
                   >
-                    <div className="bg-yellow-500 p-4 rounded-full group-hover:bg-yellow-600 transition-colors">
+                    <div className="bg-blue-600 p-4 rounded-full group-hover:bg-blue-700 transition-colors">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="currentColor"
