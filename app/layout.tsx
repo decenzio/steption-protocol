@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "STEPTIONS - Options Protocol on Stellar",
+  title: "STEPTION PROTOCOL - Options Protocol on Stellar",
   description: "The first comprehensive options trading protocol on Stellar blockchain. Advanced DeFi strategies with gasless transactions.",
   icons: {
     icon: [

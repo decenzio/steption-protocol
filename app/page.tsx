@@ -28,9 +28,9 @@ export default function LandingPage() {
 
   const faqs = [
     {
-      question: "What is STEPTIONS?",
+      question: "What is STEPTION PROTOCOL?",
       answer:
-        "STEPTIONS is a decentralized options trading platform offering advanced features for trading, liquidity provision, and portfolio management.",
+        "STEPTION PROTOCOL is a decentralized options trading platform offering advanced features for trading, liquidity provision, and portfolio management.",
     },
     {
       question: "How do I earn rewards?",
@@ -40,12 +40,12 @@ export default function LandingPage() {
     {
       question: "What assets are supported?",
       answer:
-        "STEPTIONS supports leading cryptocurrencies such as Bitcoin, Ethereum, and more.",
+        "STEPTION PROTOCOL supports leading cryptocurrencies such as Bitcoin, Ethereum, and more.",
     },
     {
-      question: "Is STEPTIONS secure?",
+      question: "Is STEPTION PROTOCOL secure?",
       answer:
-        "Yes, STEPTIONS uses advanced security protocols and smart contract audits to ensure the safety of your funds and trading activities.",
+        "Yes, STEPTION PROTOCOL uses advanced security protocols and smart contract audits to ensure the safety of your funds and trading activities.",
     },
     {
       question: "How do I get started?",
@@ -128,12 +128,12 @@ export default function LandingPage() {
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  STEPTIONS brings institutional-grade options trading to the Stellar ecosystem. 
+                  STEPTION PROTOCOL brings institutional-grade options trading to the Stellar ecosystem. 
                   Our platform combines the security and speed of Stellar with advanced DeFi 
                   options protocols.
                 </p>
                 <p>
-                  Built for both beginners and professional traders, STEPTIONS offers 
+                  Built for both beginners and professional traders, STEPTION PROTOCOL offers 
                   comprehensive tools for portfolio management, risk hedging, and yield generation 
                   through our innovative liquidity pools.
                 </p>
@@ -193,7 +193,7 @@ export default function LandingPage() {
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
                 <img
                   src="/examples.png"
-                  alt="STEPTIONS Trading Interface"
+                  alt="STEPTION PROTOCOL Trading Interface"
                   className="w-full h-auto"
                 />
               </div>
@@ -211,7 +211,7 @@ export default function LandingPage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Options are financial instruments that give you the right to buy or sell an asset 
-              at a predetermined price before a specific date. With STEPTIONS, trade call and put 
+              at a predetermined price before a specific date. With STEPTION PROTOCOL, trade call and put 
               options on leading assets.
             </p>
           </div>
@@ -376,7 +376,7 @@ export default function LandingPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">
-              Everything you need to know about STEPTIONS and options trading on Stellar
+              Everything you need to know about STEPTION PROTOCOL and options trading on Stellar
             </p>
           </div>
           <Accordion type="single" collapsible className="space-y-6">
@@ -761,7 +761,7 @@ export default function LandingPage() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-yellow-400 bg-clip-text text-transparent">
-                    STEPTIONS
+                    STEPTION PROTOCOL
                   </h3>
                   <p className="text-gray-400 text-sm">Powered by Decenzio</p>
                 </div>
@@ -851,7 +851,7 @@ export default function LandingPage() {
 
           <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 STEPTIONS by Decenzio. All rights reserved.
+              © 2025 STEPTION PROTOCOL by Decenzio. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>

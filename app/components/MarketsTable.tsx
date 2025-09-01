@@ -149,7 +149,7 @@ export default function MarketsTable() {
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-orange-500"></div>
               <span className="text-sm font-semibold text-blue-700">
-                STEPTIONS STATS
+                STEPTION PROTOCOL STATS
               </span>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function MarketsTable() {
                 className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider cursor-pointer hover:text-gray-900 transition-colors"
                 onClick={() => handleSort("steptionsTvl")}
               >
-                Steptions TVL ↓
+                Protocol TVL ↓
               </th>
             </tr>
           </thead>

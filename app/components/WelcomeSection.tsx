@@ -6,7 +6,7 @@ export default function WelcomeSection() {
           Welcome to
         </span>{" "}
         <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">
-          STEPTIONS
+          STEPTION PROTOCOL
         </span>
       </h1>
       <p className="text-xl font-semibold text-gray-700 max-w-3xl mx-auto mb-8">
