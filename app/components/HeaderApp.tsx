@@ -71,7 +71,7 @@ export default function HeaderApp() {
           <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <Logo className="w-16 h-16" />
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-gray-900 tracking-tight">STEPTIONS</span>
+              <span className="text-2xl font-bold text-gray-900 tracking-tight">STEPTION PROTOCOL</span>
               <span className="text-xs text-gray-500 -mt-1">by Decenzio</span>
             </div>
           </Link>

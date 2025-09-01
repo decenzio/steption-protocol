@@ -66,13 +66,13 @@ export default function LandingPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
           <div className="text-center">
             <div className="mb-8">
-              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 text-white border border-white/20 backdrop-blur-sm">
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-white/20 backdrop-blur-sm">
                 Built on Stellar Network
               </span>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
               The First Options Protocol on{" "}
-              <span className="bg-gradient-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-300 to-yellow-400 bg-clip-text text-transparent">
                 Stellar
               </span>
             </h1>
@@ -81,11 +81,11 @@ export default function LandingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/app">
-                <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 px-10 py-4 text-lg font-semibold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
+                <Button size="lg" className="bg-white text-yellow-700 hover:bg-yellow-50 px-10 py-4 text-lg font-semibold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
                   Launch Application
                 </Button>
               </Link>
-              <Button size="lg" className="border-2 border-white/70 text-white hover:bg-white hover:text-blue-700 px-10 py-4 text-lg font-semibold bg-transparent backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+              <Button size="lg" className="border-2 border-white/70 text-white hover:bg-white hover:text-yellow-700 px-10 py-4 text-lg font-semibold bg-transparent backdrop-blur-sm hover:shadow-xl transition-all duration-300">
                 View Documentation
               </Button>
             </div>
@@ -111,13 +111,13 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="mb-6">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-yellow-400">
                   About STEPTIONS
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
                 Professional Options Trading on{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
                   Stellar
                 </span>
               </h2>
@@ -184,7 +184,7 @@ export default function LandingPage() {
             </div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-orange-50 rounded-3xl transform rotate-2"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-3xl transform rotate-2"></div>
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
                 <img
                   src="/examples.png"
@@ -225,7 +225,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-50 text-orange-700 border border-orange-200">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-yellow-400">
                 How It Works
               </span>
             </div>
@@ -244,7 +244,7 @@ export default function LandingPage() {
                 <defs>
                   <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#3b82f6" />
-                    <stop offset="50%" stopColor="#f97316" />
+                    <stop offset="50%" stopColor="var(--yellow-500)" />
                     <stop offset="100%" stopColor="#10b981" />
                   </linearGradient>
                 </defs>
@@ -257,9 +257,9 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Step 1 */}
               <div className="relative group">
-                <Card className="h-full border-0 bg-gradient-to-br from-blue-50 via-blue-50 to-blue-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <Card className="h-full border-0 bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                   <CardHeader className="pb-6 text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
                       <span className="text-white font-bold text-2xl">1</span>
                     </div>
                     <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
@@ -273,11 +273,11 @@ export default function LandingPage() {
                     </p>
                     <div className="flex justify-center space-x-4 text-sm text-gray-500">
                       <span className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                         Instant Setup
                       </span>
                       <span className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                         Secure
                       </span>
                     </div>
@@ -287,9 +287,9 @@ export default function LandingPage() {
 
               {/* Step 2 */}
               <div className="relative group">
-                <Card className="h-full border-0 bg-gradient-to-br from-orange-50 via-orange-50 to-orange-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <Card className="h-full border-0 bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                   <CardHeader className="pb-6 text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
                       <span className="text-white font-bold text-2xl">2</span>
                     </div>
                     <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
@@ -303,11 +303,11 @@ export default function LandingPage() {
                     </p>
                     <div className="flex justify-center space-x-4 text-sm text-gray-500">
                       <span className="flex items-center">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                         High APY
                       </span>
                       <span className="flex items-center">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                         Flexible
                       </span>
                     </div>
@@ -317,9 +317,9 @@ export default function LandingPage() {
 
               {/* Step 3 */}
               <div className="relative group">
-                <Card className="h-full border-0 bg-gradient-to-br from-green-50 via-green-50 to-green-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <Card className="h-full border-0 bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                   <CardHeader className="pb-6 text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
                       <span className="text-white font-bold text-2xl">3</span>
                     </div>
                     <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
@@ -333,11 +333,11 @@ export default function LandingPage() {
                     </p>
                     <div className="flex justify-center space-x-4 text-sm text-gray-500">
                       <span className="flex items-center">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                         Real-time
                       </span>
                       <span className="flex items-center">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                         Analytics
                       </span>
                     </div>
@@ -349,7 +349,7 @@ export default function LandingPage() {
             {/* CTA Section */}
             <div className="text-center mt-16">
               <Link href="/app">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-orange-500 text-white hover:from-blue-700 hover:to-orange-600 px-10 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white hover:from-yellow-600 hover:to-yellow-700 px-10 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
                   Start Your Journey
                 </Button>
               </Link>
@@ -363,7 +363,7 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
             <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-yellow-400">
                 FAQ
               </span>
             </div>
@@ -381,7 +381,7 @@ export default function LandingPage() {
                 value={`item-${index}`}
                 className="bg-gray-50 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
               >
-                <AccordionTrigger className="text-lg font-semibold text-gray-900 hover:text-blue-600 px-8 py-6 text-left [&[data-state=open]]:text-blue-600 [&[data-state=open]]:bg-blue-50 transition-colors">
+                <AccordionTrigger className="text-lg font-semibold text-gray-900 hover:text-yellow-500 px-8 py-6 text-left [&[data-state=open]]:text-yellow-500 [&[data-state=open]]:bg-yellow-50 transition-colors">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 px-8 pb-6 leading-relaxed border-t border-gray-200 bg-white">
@@ -394,10 +394,10 @@ export default function LandingPage() {
           </Accordion>
           
           {/* CTA */}
-          <div className="text-center mt-16 p-8 bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl border border-gray-200">
+          <div className="text-center mt-16 p-8 bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-2xl border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h3>
             <p className="text-gray-600 mb-6">Our team is here to help you get started with options trading on Stellar.</p>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-semibold">
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 font-semibold">
               Contact Support
             </Button>
           </div>
@@ -409,13 +409,13 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-50 text-orange-700 border border-orange-200">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-700 border border-yellow-400">
                 Our Foundation
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8 leading-tight">
               Backed by{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
                 Decenzio
               </span>
             </h2>
@@ -441,15 +441,15 @@ export default function LandingPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                  <div className="text-3xl font-bold text-yellow-500 mb-2">50+</div>
                   <div className="text-gray-600 font-medium">Projects Delivered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-600 mb-2">5+</div>
+                  <div className="text-3xl font-bold text-yellow-500 mb-2">5+</div>
                   <div className="text-gray-600 font-medium">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">15+</div>
+                  <div className="text-3xl font-bold text-yellow-500 mb-2">15+</div>
                   <div className="text-gray-600 font-medium">Team Members</div>
                 </div>
               </div>
@@ -461,7 +461,7 @@ export default function LandingPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Meet the HackPera Team</h3>
              {/* Hackathon Achievement Badge */}
             <div className="mb-8">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-100 to-orange-100 border-2 border-yellow-300 shadow-lg">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-50 to-yellow-100 border-2 border-yellow-500 shadow-lg">
                 <span className="text-2xl mr-3">🏆</span>
                 <div className="text-left">
                   <div className="text-lg font-bold text-gray-900">4th Place Winner</div>
@@ -475,7 +475,7 @@ export default function LandingPage() {
             <Card className="text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 bg-white shadow-lg">
               <CardContent className="pt-12 pb-8">
                 <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full transform rotate-3 group-hover:rotate-6 transition-transform"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full transform rotate-3 group-hover:rotate-6 transition-transform"></div>
                   <img
                     src="/team/romi.jpg"
                     alt="Romi - Web3 Specialist"
@@ -483,7 +483,7 @@ export default function LandingPage() {
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Romi</h3>
-                <p className="text-blue-600 font-semibold text-lg mb-3">Web3 Specialist</p>
+                <p className="text-yellow-500 font-semibold text-lg mb-3">Web3 Specialist</p>
                 <p className="text-gray-600 text-sm">Expert in blockchain architecture and decentralized protocols</p>
               </CardContent>
             </Card>
@@ -491,7 +491,7 @@ export default function LandingPage() {
             <Card className="text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 bg-white shadow-lg">
               <CardContent className="pt-12 pb-8">
                 <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform rotate-3 group-hover:rotate-6 transition-transform"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full transform rotate-3 group-hover:rotate-6 transition-transform"></div>
                   <img
                     src="/team/murphy.jpeg"
                     alt="Murphy - Frontend Developer"
@@ -499,7 +499,7 @@ export default function LandingPage() {
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Murphy</h3>
-                <p className="text-orange-600 font-semibold text-lg mb-3">Frontend Developer</p>
+                <p className="text-yellow-500 font-semibold text-lg mb-3">Frontend Developer</p>
                 <p className="text-gray-600 text-sm">Specialized in modern React applications and user experience design</p>
               </CardContent>
             </Card>
@@ -507,7 +507,7 @@ export default function LandingPage() {
             <Card className="text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 bg-white shadow-lg">
               <CardContent className="pt-12 pb-8">
                 <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-full transform rotate-3 group-hover:rotate-6 transition-transform"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full transform rotate-3 group-hover:rotate-6 transition-transform"></div>
                   <img
                     src="/team/filip.jpeg"
                     alt="Filip - Smart Contract Developer"
@@ -515,7 +515,7 @@ export default function LandingPage() {
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Filip</h3>
-                <p className="text-green-600 font-semibold text-lg mb-3">Smart Contract Developer</p>
+                <p className="text-yellow-500 font-semibold text-lg mb-3">Smart Contract Developer</p>
                 <p className="text-gray-600 text-sm">Expert in Stellar smart contracts and DeFi protocol development</p>
               </CardContent>
             </Card>
@@ -542,9 +542,9 @@ export default function LandingPage() {
                 <Input
                   type="email"
                   placeholder="Enter your email address"
-                  className="w-full text-base px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                  className="w-full text-base px-4 py-3 rounded-lg border-gray-300 focus:border-yellow-500 focus:ring-yellow-500"
                 />
-                <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold">
+                <Button size="lg" className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 text-lg font-semibold">
                   Subscribe to Newsletter
                 </Button>
               </div>
@@ -562,9 +562,9 @@ export default function LandingPage() {
                     href="mailto:hello@decenzio.com"
                     className="flex items-center space-x-4"
                   >
-                    <div className="bg-gray-100 p-4 rounded-full group-hover:bg-blue-100 transition-colors">
+                    <div className="bg-gray-100 p-4 rounded-full group-hover:bg-yellow-50 transition-colors">
                       <svg
-                        className="w-6 h-6 text-gray-600 group-hover:text-blue-600"
+                        className="w-6 h-6 text-gray-600 group-hover:text-yellow-500"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -578,7 +578,7 @@ export default function LandingPage() {
                       </svg>
                     </div>
                     <div className="text-left">
-                      <div className="font-semibold text-gray-900 text-base group-hover:text-blue-600">
+                      <div className="font-semibold text-gray-900 text-base group-hover:text-yellow-500">
                         Email Us
                       </div>
                       <div className="text-gray-600 text-sm">
@@ -608,7 +608,7 @@ export default function LandingPage() {
                       </svg>
                     </div>
                     <div className="text-left">
-                      <div className="font-semibold text-gray-900 text-base group-hover:text-blue-600">
+                      <div className="font-semibold text-gray-900 text-base group-hover:text-yellow-500">
                         Follow on X
                       </div>
                       <div className="text-gray-600 text-sm">@DecenzioHQ</div>
@@ -626,7 +626,7 @@ export default function LandingPage() {
                     rel="noopener noreferrer"
                     className="flex items-center space-x-4"
                   >
-                    <div className="bg-blue-600 p-4 rounded-full group-hover:bg-blue-700 transition-colors">
+                    <div className="bg-yellow-500 p-4 rounded-full group-hover:bg-yellow-600 transition-colors">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="currentColor"
@@ -636,7 +636,7 @@ export default function LandingPage() {
                       </svg>
                     </div>
                     <div className="text-left">
-                      <div className="font-semibold text-gray-900 text-base group-hover:text-blue-600">
+                      <div className="font-semibold text-gray-900 text-base group-hover:text-yellow-500">
                         Connect on LinkedIn
                       </div>
                       <div className="text-gray-600 text-sm">Decenzio</div>
@@ -654,13 +654,13 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-50 text-orange-600 border border-orange-200">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-50 text-yellow-500 border border-yellow-400">
                 Community Feedback
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
               Trusted by{" "}
-              <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">
                 Web3 Leaders
               </span>
             </h2>
@@ -672,17 +672,17 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="mb-6">
-                <div className="flex text-orange-400 mb-4">
+                <div className="flex text-yellow-500 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-xl">⭐</span>
                   ))}
                 </div>
                 <p className="text-gray-200 text-lg leading-relaxed">
-                  "Revolutionary approach to options trading on Stellar. The UX is incredibly smooth and intuitive."
+                  &ldquo;Revolutionary approach to options trading on Stellar. The UX is incredibly smooth and intuitive.&rdquo;
                 </p>
               </div>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-orange-400 rounded-full flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-yellow-400 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-semibold">SH</span>
                 </div>
                 <div>
@@ -694,13 +694,13 @@ export default function LandingPage() {
             
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="mb-6">
-                <div className="flex text-orange-400 mb-4">
+                <div className="flex text-yellow-500 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-xl">⭐</span>
                   ))}
                 </div>
                 <p className="text-gray-200 text-lg leading-relaxed">
-                  "Finally, professional-grade options trading on Stellar."
+                  &ldquo;Finally, professional-grade options trading on Stellar.&rdquo;
                 </p>
               </div>
               <div className="flex items-center">
@@ -716,13 +716,13 @@ export default function LandingPage() {
             
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="mb-6">
-                <div className="flex text-orange-400 mb-4">
+                <div className="flex text-yellow-500 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-xl">⭐</span>
                   ))}
                 </div>
                 <p className="text-gray-200 text-lg leading-relaxed">
-                  "The integration with Stellar is seamless. This is exactly what the ecosystem needed for advanced trading."
+                  &ldquo;The integration with Stellar is seamless. This is exactly what the ecosystem needed for advanced trading.&rdquo;
                 </p>
               </div>
               <div className="flex items-center">
@@ -755,7 +755,7 @@ export default function LandingPage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-yellow-400 bg-clip-text text-transparent">
                     STEPTIONS
                   </h3>
                   <p className="text-gray-400 text-sm">Powered by Decenzio</p>
@@ -771,7 +771,7 @@ export default function LandingPage() {
                     <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Discord">
+                <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors" aria-label="Discord">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
                   </svg>
@@ -781,7 +781,7 @@ export default function LandingPage() {
                     <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors" aria-label="GitHub">
+                <a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors" aria-label="GitHub">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
@@ -794,22 +794,22 @@ export default function LandingPage() {
               <h3 className="text-lg font-semibold mb-6 text-white">Platform</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="#features" className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform inline-block">
+                  <a href="#features" className="text-gray-400 hover:text-yellow-500 transition-colors hover:translate-x-1 transform inline-block">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#how-it-works" className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform inline-block">
+                  <a href="#how-it-works" className="text-gray-400 hover:text-yellow-500 transition-colors hover:translate-x-1 transform inline-block">
                     How It Works
                   </a>
                 </li>
                 <li>
-                  <a href="/app" className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform inline-block">
+                  <a href="/app" className="text-gray-400 hover:text-yellow-500 transition-colors hover:translate-x-1 transform inline-block">
                     Launch App
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform inline-block">
+                  <a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors hover:translate-x-1 transform inline-block">
                     API Documentation
                   </a>
                 </li>
@@ -831,12 +831,12 @@ export default function LandingPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform inline-block">
+                  <a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors hover:translate-x-1 transform inline-block">
                     Help Center
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform inline-block">
+                  <a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors hover:translate-x-1 transform inline-block">
                     Community
                   </a>
                 </li>

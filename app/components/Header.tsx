@@ -12,7 +12,7 @@ export default function Header() {
           <div className="flex items-center space-x-3">
             <Logo className="w-16 h-16" />
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-gray-900 tracking-tight">STEPTIONS</span>
+              <span className="text-2xl font-bold text-gray-900 tracking-tight">STEPTION PROTOCOL</span>
               <span className="text-xs text-gray-500 -mt-1">by Decenzio</span>
             </div>
           </div>
@@ -27,7 +27,7 @@ export default function Header() {
           {/* CTA Section */}
           <div className="flex items-center space-x-4">
             <Link href="/app">
-              <button className="bg-gradient-to-r from-blue-600/90 to-blue-700/90 backdrop-blur-sm text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:from-blue-700/95 hover:to-blue-800/95 transform hover:-translate-y-0.5 transition-all shadow-lg hover:shadow-xl border border-white/20">
+              <button className="bg-gradient-to-r from-yellow-500/90 to-yellow-600/90 backdrop-blur-sm text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:from-yellow-600/95 hover:to-yellow-700/95 transform hover:-translate-y-0.5 transition-all shadow-lg hover:shadow-xl border border-white/20">
                 Open App
               </button>
             </Link>

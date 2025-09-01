@@ -5,17 +5,17 @@
   --background: #ffffff;
   --foreground: #1a1a1a;
 
-  /* Orange palette */
-  --orange-50: #fff7ed;
-  --orange-100: #ffedd5;
-  --orange-200: #fed7aa;
-  --orange-300: #fdba74;
-  --orange-400: #fb923c;
-  --orange-500: #f97316;
-  --orange-600: #ea580c;
-  --orange-700: #c2410c;
-  --orange-800: #9a3412;
-  --orange-900: #7c2d12;
+  /* Yellow palette */
+  --yellow-50: #fefdf8;
+  --yellow-100: #fef9e7;
+  --yellow-200: #fef0c7;
+  --yellow-300: #fde68a;
+  --yellow-400: #fcd34d;
+  --yellow-500: #f7db52;
+  --yellow-600: #d4a017;
+  --yellow-700: #b8860b;
+  --yellow-800: #9a6b0a;
+  --yellow-900: #7c5309;
 
   /* Blue palette */
   --blue-50: #eff6ff;
@@ -30,9 +30,9 @@
   --blue-900: #1e3a8a;
 
   /* Accent colors */
-  --primary: var(--blue-600);
-  --secondary: var(--orange-500);
-  --accent: var(--orange-400);
+  --primary: var(--yellow-500);
+  --secondary: var(--yellow-600);
+  --accent: var(--yellow-400);
   --neutral: #f1f5f9;
   --border: var(--blue-200);
 }
@@ -59,9 +59,9 @@
     --foreground: #f1f5f9;
     --neutral: #1e293b;
     --border: var(--blue-800);
-    --primary: var(--blue-400);
-    --secondary: var(--orange-400);
-    --accent: var(--orange-300);
+    --primary: var(--yellow-400);
+    --secondary: var(--yellow-500);
+    --accent: var(--yellow-300);
   }
 }
 
@@ -95,32 +95,32 @@ button:focus {
   outline-offset: 2px;
 }
 
-/* Primary button (blue) */
+/* Primary button (yellow) */
 .btn-primary {
-  background: linear-gradient(135deg, var(--blue-600), var(--blue-700));
+  background: linear-gradient(135deg, var(--yellow-500), var(--yellow-600));
   color: white;
-  border: 2px solid var(--blue-600);
-  box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.25);
+  border: 2px solid var(--yellow-500);
+  box-shadow: 0 4px 14px 0 rgba(247, 219, 82, 0.25);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--blue-700), var(--blue-800));
+  background: linear-gradient(135deg, var(--yellow-600), var(--yellow-700));
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px 0 rgba(59, 130, 246, 0.35);
+  box-shadow: 0 6px 20px 0 rgba(247, 219, 82, 0.35);
 }
 
-/* Secondary button (orange outline) */
+/* Secondary button (yellow outline) */
 .btn-secondary {
   background: transparent;
-  color: var(--orange-600);
-  border: 2px solid var(--orange-500);
+  color: var(--yellow-600);
+  border: 2px solid var(--yellow-500);
 }
 
 .btn-secondary:hover {
-  background: var(--orange-500);
+  background: var(--yellow-500);
   color: white;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.25);
+  box-shadow: 0 4px 14px 0 rgba(247, 219, 82, 0.25);
 }
 
 /* Card styling with gradient borders */
@@ -139,7 +139,7 @@ button:focus {
   position: absolute;
   inset: 0;
   padding: 2px;
-  background: linear-gradient(135deg, var(--blue-400), var(--orange-400));
+  background: linear-gradient(135deg, var(--yellow-400), var(--yellow-600));
   border-radius: inherit;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
@@ -160,7 +160,7 @@ button:focus {
 
 /* Logo styling */
 .logo-icon {
-  background: linear-gradient(135deg, var(--blue-600), var(--orange-500));
+  background: linear-gradient(135deg, var(--yellow-500), var(--yellow-600));
   border-radius: 0.5rem;
   transform: rotate(45deg);
 }

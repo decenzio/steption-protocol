@@ -138,7 +138,7 @@ export default function LiquiditySection() {
   const getRiskColor = (risk: string) => {
     switch (risk) {
       case 'Low': return 'text-green-700 bg-green-100 border-green-300'
-      case 'Medium': return 'text-yellow-700 bg-yellow-100 border-yellow-300'
+      case 'Medium': return 'text-yellow-700 bg-yellow-50 border-yellow-400'
       case 'High': return 'text-red-700 bg-red-100 border-red-300'
       default: return 'text-gray-700 bg-gray-100 border-gray-300'
     }
