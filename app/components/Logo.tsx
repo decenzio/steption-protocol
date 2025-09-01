@@ -1,7 +1,15 @@
-export default function Logo() {
+interface LogoProps {
+  className?: string;
+}
+
+export default function Logo({ className = "w-12 h-12" }: LogoProps) {
   return (
-    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center shadow-md">
-      <span className="text-white font-extrabold text-2xl rotate-45">S</span>
+    <div className={`${className} flex items-center justify-center`}>
+      <img 
+        src="/logo.png" 
+        alt="STEPTION PROTOCOL Logo" 
+        className="w-full h-full object-contain"
+      />
     </div>
   )
 }

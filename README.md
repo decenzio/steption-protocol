@@ -1,4 +1,4 @@
-# STEPTIONS - Stellar Options Protocol
+# STEPTION PROTOCOL - Stellar Options Protocol
 
 The First Options Protocol on Stellar. Insure any asset. Hedge price risk. Earn yield.
 
@@ -7,7 +7,7 @@ Here's a comprehensive overview:
 - [App Demo](https://steptions-app.vercel.app/app)
 - [Pitchdeck](https://drive.proton.me/urls/DQCY37EH6R#rSeh0bS1dIMz)
 
-## 🚀 **What is STEPTIONS?**
+## 🚀 **What is STEPTION PROTOCOL?**
 - **The First Options Protocol on Stellar** - A decentralized platform for trading cryptocurrency options
 - **Purpose**: Allow users to insure assets, hedge price risk, and earn yield through options trading
 - **Target Audience**: Both beginners and professional traders
@@ -51,8 +51,8 @@ Here's a comprehensive overview:
 
 ## 🔗 **Links & Contact**
 - **Live App**: https://steptions-app.vercel.app
-- **Email**: hello@steptions.com
-- **Social**: @steptions (X/Twitter, Telegram)
+- **Email**: hello@decenzio.com
+- **Social**: @decenzioHQ (X/Twitter)
 
 ## 🛠️ **Development Setup**
 The project uses git submodules and supports multiple package managers (npm, yarn, pnpm, bun) with Turbopack for faster development.
