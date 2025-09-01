@@ -51,8 +51,8 @@ Here's a comprehensive overview:
 
 ## 🔗 **Links & Contact**
 - **Live App**: https://steptions-app.vercel.app
-- **Email**: hello@steptions.com
-- **Social**: @steptions (X/Twitter, Telegram)
+- **Email**: hello@decenzio.com
+- **Social**: @decenzioHQ (X/Twitter)
 
 ## 🛠️ **Development Setup**
 The project uses git submodules and supports multiple package managers (npm, yarn, pnpm, bun) with Turbopack for faster development.
