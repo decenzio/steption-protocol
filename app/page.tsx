@@ -445,14 +445,21 @@ export default function LandingPage() {
             </p>
              {/* Hackathon Achievement Badge */}
             <div className="mb-12">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-50 to-yellow-100 border-2 border-yellow-500 shadow-lg">
-                <span className="text-2xl mr-3">🏆</span>
-                <div className="text-left">
-                  <div className="text-lg font-bold text-gray-900">STEPTION PROTOCOL</div>
-                  <div className="text-sm text-gray-700">4th Place Winner - DeFi Category</div>
-                  <div className="text-xs text-gray-600">HackPera Istanbul Hackathon</div>
+              <a 
+                href="https://x.com/riseinweb3/status/1942963776036249812" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block transition-transform hover:scale-105"
+              >
+                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-50 to-yellow-100 border-2 border-yellow-500 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
+                  <span className="text-2xl mr-3">🏆</span>
+                  <div className="text-left">
+                    <div className="text-lg font-bold text-gray-900">STEPTION PROTOCOL</div>
+                    <div className="text-sm text-gray-700">4th Place Winner - DeFi Category</div>
+                    <div className="text-xs text-gray-600">HackPera Istanbul Hackathon</div>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <h4 className="text-xl font-semibold text-gray-900 mb-8">Meet the Hackathon Team</h4>
           </div>
@@ -499,7 +506,7 @@ export default function LandingPage() {
                 <p className="text-yellow-500 font-semibold text-lg mb-3">Frontend Developer</p>
                 <p className="text-gray-600 text-sm mb-4">Specialized in modern React applications and user experience design</p>
                 <a 
-                  href="https://twitter.com/murphy_dev" 
+                  href="https://twitter.com/murphy__ts"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-500 hover:text-blue-600 text-sm font-medium transition-colors"
@@ -507,7 +514,7 @@ export default function LandingPage() {
                   <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
-                  @murphy_dev
+                  @murphy__ts
                 </a>
               </CardContent>
             </Card>
