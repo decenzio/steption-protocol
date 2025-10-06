@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
-import Logo from "@/app/components/Logo";
 import { Button } from "@/app/components/ui/button";
 import {
   Card,
@@ -18,12 +17,42 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/app/components/ui/accordion";
+import { newsletterService } from "@/app/services/supabase";
 
 export default function LandingPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [email, setEmail] = useState("");
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const [subscriptionMessage, setSubscriptionMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubscribing(true);
+    setSubscriptionMessage(null);
+
+    const result = await newsletterService.subscribe(email);
+
+    if (result.success) {
+      setSubscriptionMessage({
+        type: "success",
+        text: "🎉 Successfully subscribed! Check your inbox for updates.",
+      });
+      setEmail("");
+    } else {
+      setSubscriptionMessage({
+        type: "error",
+        text: result.error || "Failed to subscribe. Please try again.",
+      });
+    }
+
+    setIsSubscribing(false);
   };
 
   const faqs = [
@@ -564,16 +593,36 @@ export default function LandingPage() {
           {/* Newsletter Subscription */}
           <div className="max-w-lg mx-auto mb-20">
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-              <div className="space-y-4">
+              <form onSubmit={handleNewsletterSubmit} className="space-y-4">
                 <Input
                   type="email"
                   placeholder="Enter your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={isSubscribing}
+                  required
                   className="w-full text-base px-4 py-3 rounded-lg border-gray-300 focus:border-yellow-500 focus:ring-yellow-500"
                 />
-                <Button size="lg" className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 text-lg font-semibold">
-                  Subscribe to Newsletter
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  disabled={isSubscribing}
+                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubscribing ? "Subscribing..." : "Subscribe to Newsletter"}
                 </Button>
-              </div>
+                {subscriptionMessage && (
+                  <div
+                    className={`p-4 rounded-lg text-sm ${
+                      subscriptionMessage.type === "success"
+                        ? "bg-green-50 text-green-800 border border-green-200"
+                        : "bg-red-50 text-red-800 border border-red-200"
+                    }`}
+                  >
+                    {subscriptionMessage.text}
+                  </div>
+                )}
+              </form>
             </div>
           </div>
 
