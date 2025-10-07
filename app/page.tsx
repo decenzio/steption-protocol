@@ -22,8 +22,8 @@ import { newsletterService } from "@/app/services/supabase";
 export default function LandingPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [email, setEmail] = useState("");
-  const [isSubscribing, setIsSubscribing] = useState(false);
-  const [subscriptionMessage, setSubscriptionMessage] = useState<{
+  const [isJoiningWaitlist, setIsJoiningWaitlist] = useState(false);
+  const [waitlistMessage, setWaitlistMessage] = useState<{
     type: "success" | "error";
     text: string;
   } | null>(null);
@@ -32,27 +32,27 @@ export default function LandingPage() {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubscribing(true);
-    setSubscriptionMessage(null);
+    setIsJoiningWaitlist(true);
+    setWaitlistMessage(null);
 
     const result = await newsletterService.subscribe(email);
 
     if (result.success) {
-      setSubscriptionMessage({
+      setWaitlistMessage({
         type: "success",
-        text: "🎉 Successfully subscribed! Check your inbox for updates.",
+        text: "🎉 You're on the app launch waitlist! We'll email you updates.",
       });
       setEmail("");
     } else {
-      setSubscriptionMessage({
+      setWaitlistMessage({
         type: "error",
-        text: result.error || "Failed to subscribe. Please try again.",
+        text: result.error || "Failed to join the waitlist. Please try again.",
       });
     }
 
-    setIsSubscribing(false);
+    setIsJoiningWaitlist(false);
   };
 
   const faqs = [
@@ -230,6 +230,42 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+            {/* App Launch Waitlist */}
+            <div className="max-w-lg mx-auto mb-20">
+        <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+          <form onSubmit={handleWaitlistSubmit} className="space-y-4">
+            <Input
+              type="email"
+              placeholder="Enter your email to join the waitlist"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={isJoiningWaitlist}
+              required
+              className="w-full text-base px-4 py-3 rounded-lg border-gray-300 focus:border-yellow-500 focus:ring-yellow-500"
+            />
+            <Button 
+              type="submit" 
+              size="lg" 
+              disabled={isJoiningWaitlist}
+              className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isJoiningWaitlist ? "Joining..." : "Join App Launch Waitlist"}
+            </Button>
+            {waitlistMessage && (
+              <div
+                className={`p-4 rounded-lg text-sm ${
+                  waitlistMessage.type === "success"
+                    ? "bg-green-50 text-green-800 border border-green-200"
+                    : "bg-red-50 text-red-800 border border-red-200"
+                }`}
+              >
+                {waitlistMessage.text}
+              </div>
+            )}
+          </form>
+        </div>
+      </div>
 
       {/* What Options Are */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -588,42 +624,6 @@ export default function LandingPage() {
             <p className="text-xl text-gray-600 leading-relaxed">
               Subscribe to our newsletter and follow us on social media for the latest updates and news.
             </p>
-          </div>
-
-          {/* Newsletter Subscription */}
-          <div className="max-w-lg mx-auto mb-20">
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-              <form onSubmit={handleNewsletterSubmit} className="space-y-4">
-                <Input
-                  type="email"
-                  placeholder="Enter your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={isSubscribing}
-                  required
-                  className="w-full text-base px-4 py-3 rounded-lg border-gray-300 focus:border-yellow-500 focus:ring-yellow-500"
-                />
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  disabled={isSubscribing}
-                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubscribing ? "Subscribing..." : "Subscribe to Newsletter"}
-                </Button>
-                {subscriptionMessage && (
-                  <div
-                    className={`p-4 rounded-lg text-sm ${
-                      subscriptionMessage.type === "success"
-                        ? "bg-green-50 text-green-800 border border-green-200"
-                        : "bg-red-50 text-red-800 border border-red-200"
-                    }`}
-                  >
-                    {subscriptionMessage.text}
-                  </div>
-                )}
-              </form>
-            </div>
           </div>
 
           {/* Contact & Social Media */}
