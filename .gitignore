@@ -42,3 +42,13 @@ yarn-error.log*
 next-env.d.ts
 
 .idea
+
+# Soroban build and test outputs
+/target/
+**/test_snapshots/
+.sites-runtime/
+/.local-run/
+
+# Local research documents (keep implementation and deployment docs tracked)
+/stellar-options-dev-brief/
+/@stellar-options-dev-brief/research/

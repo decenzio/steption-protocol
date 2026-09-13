@@ -1,0 +1,16 @@
+[package]
+name = "steption-options"
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.91.0"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+soroban-sdk = { workspace = true }
+oracle-interface = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+steption-mock-oracle = { path = "../mock-oracle" }
