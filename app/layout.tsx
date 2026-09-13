@@ -1,29 +1,20 @@
 import type { Metadata } from "next";
+import { pageMetadata, siteUrl } from "./lib/seo";
 import "./globals.css";
-
 export const metadata: Metadata = {
-  title: "STEPTION PROTOCOL - Options Protocol on Stellar",
-  description: "The first comprehensive options trading protocol on Stellar blockchain. Advanced DeFi strategies with gasless transactions.",
-  icons: {
-    icon: [
-      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.png', sizes: '16x16', type: 'image/png' },
-    ],
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
-  },
+  metadataBase: new URL(siteUrl),
+  applicationName: "Steption",
+  ...pageMetadata("/"),
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
-
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
-  children: React.ReactNode;
-}>) {
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-    <body className="font-sans antialiased">
-    {children}
-    </body>
+      <body>{children}</body>
     </html>
   );
 }

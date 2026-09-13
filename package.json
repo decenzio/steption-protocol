@@ -1,27 +1,34 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
+  "name": "steption-stellar-options",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "node scripts/dev.mjs",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "node scripts/server.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "contracts:test": "cargo test --workspace",
+    "contracts:build": "cargo build --target wasm32v1-none --release",
+    "testnet:check": "node --env-file-if-exists=.env.local scripts/preflight.mjs",
+    "test:abi": "node scripts/check-abi.mjs",
+    "test:seo": "node scripts/check-seo.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-slot": "^1.2.3",
-    "@stellar/stellar-sdk": "^13.3.0",
+    "@stellar/freighter-api": "6.0.1",
+    "@stellar/stellar-sdk": "17.0.1",
     "@supabase/supabase-js": "^2.74.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.522.0",
-    "next": "15.3.4",
-    "passkey-kit": "^0.10.24",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "16.3.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
@@ -30,8 +37,12 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.3.4",
+    "eslint-config-next": "16.3.4",
     "tailwindcss": "^4",
+    "tsx": "^4.20.0",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

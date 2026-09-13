@@ -1,64 +1,63 @@
+import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
-import { NextRequest, NextResponse } from "next/server";
-
-const supabaseUrl = "https://sdenuvnwtecejgygmrvn.supabase.co";
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
-
-// Server-side admin client
-const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
-  auth: {
-    autoRefreshToken: false,
-    persistSession: false,
-  },
-});
-
-/**
- * POST /api/newsletter/subscribe
- * Subscribe an email to the newsletter
- */
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
+  const origin = request.headers.get("origin");
+  let sameOrigin = false;
   try {
-    const body = await request.json();
-    const email = body.email?.toLowerCase().trim();
-
-    // Validate email
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return NextResponse.json(
-        { success: false, error: "Please enter a valid email address" },
-        { status: 400 }
-      );
-    }
-
-    // Insert into database
-    const { data, error } = await supabaseAdmin
-      .from("newsletter_subscribers")
-      .insert([{ email }])
-      .select()
-      .single();
-
-    // Handle duplicate email
-    if (error?.code === "23505") {
-      return NextResponse.json(
-        { success: false, error: "This email is already subscribed" },
-        { status: 409 }
-      );
-    }
-
-    // Handle other errors
-    if (error) {
-      console.error("Supabase error:", error);
-      return NextResponse.json(
-        { success: false, error: "Failed to subscribe. Please try again." },
-        { status: 500 }
-      );
-    }
-
-    return NextResponse.json({ success: true, data }, { status: 201 });
-  } catch (error) {
-    console.error("Newsletter subscription error:", error);
+    sameOrigin =
+      !!origin && new URL(origin).host === request.headers.get("host");
+  } catch {}
+  if (!sameOrigin)
     return NextResponse.json(
-      { success: false, error: "An unexpected error occurred" },
-      { status: 500 }
+      { error: "Invalid request origin." },
+      { status: 403 },
+    );
+  const url = process.env.SUPABASE_URL,
+    key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key)
+    return NextResponse.json(
+      {
+        error:
+          "Newsletter signup is not configured yet. Contact hello@decenzio.com for updates.",
+      },
+      { status: 503 },
+    );
+  try {
+    const raw = await request.text();
+    if (raw.length > 1024)
+      return NextResponse.json(
+        { error: "Request too large." },
+        { status: 413 },
+      );
+    const { email } = JSON.parse(raw);
+    if (
+      typeof email !== "string" ||
+      email.length > 254 ||
+      !/^\S+@\S+\.\S+$/.test(email)
+    )
+      return NextResponse.json(
+        { error: "Enter a valid email address." },
+        { status: 400 },
+      );
+    const client = createClient(url, key, { auth: { persistSession: false } });
+    const { error } = await client
+      .from("newsletter_subscribers")
+      .upsert(
+        { email: email.trim().toLowerCase() },
+        { onConflict: "email", ignoreDuplicates: true },
+      );
+    if (error)
+      return NextResponse.json(
+        { error: "Signup is temporarily unavailable." },
+        { status: 503 },
+      );
+    return NextResponse.json({
+      message: "You’re subscribed to Steption updates.",
+    });
+  } catch {
+    return NextResponse.json(
+      { error: "Unable to process signup." },
+      { status: 400 },
     );
   }
 }

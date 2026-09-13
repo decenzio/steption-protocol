@@ -1,0 +1,35 @@
+name: Validate
+on: [push, pull_request]
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - name: Validate SEO and agent responses
+        run: |
+          node scripts/server.mjs --port 3014 > /tmp/steption-seo-server.log 2>&1 &
+          STEPTION_SEO_PID=$!
+          trap 'kill "$STEPTION_SEO_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --output /dev/null http://127.0.0.1:3014/; then break; fi
+            sleep 1
+          done
+          npm run test:seo -- http://127.0.0.1:3014 --indexable
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.91.0
+        with:
+          targets: wasm32v1-none
+      - run: cargo test --workspace --locked
+      - run: cargo build --target wasm32v1-none --release --locked
