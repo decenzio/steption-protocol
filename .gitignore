@@ -52,3 +52,6 @@ next-env.d.ts
 # Local research documents (keep implementation and deployment docs tracked)
 /stellar-options-dev-brief/
 /@stellar-options-dev-brief/research/
+
+# Local Testnet deployment state, CLI config, logs and environment backups
+/.testnet-deployment/

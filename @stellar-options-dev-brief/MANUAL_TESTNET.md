@@ -2,6 +2,8 @@
 
 These steps are for you to run later. They have **not** been executed against the chain. Frontend hosting and contract deployment are separate: the contracts run on Stellar, while the Next.js app runs locally or on a Node-compatible web host.
 
+For the automated Mac Terminal alternative, use `./deploy-testnet.sh --check` and then `./deploy-testnet.sh --deploy`; see [MAC_TESTNET_SCRIPT.md](MAC_TESTNET_SCRIPT.md). That script uses isolated deployment-specific Keychain identities. The generic CLI identity names in the commands below belong to this manual workflow and should not be mixed with script-managed identities.
+
 ## 1. Toolchain and local verification
 
 Use Node 22.12+, Rust 1.91.0 and Stellar CLI 28.0.0. The repository pins Rust and adds `wasm32v1-none`. Your previously installed CLI 21.2.0 needs upgrading. Use Stellar's [official CLI installation guide](https://developers.stellar.org/docs/tools/cli/install-cli).

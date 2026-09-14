@@ -43,6 +43,16 @@ The public website is at `/`. The app opens at the original `/app` route, with `
 
 ## Deployment and verification
 
+For Mac Terminal, use the root deployment script:
+
+```sh
+./deploy-testnet.sh --dry-run  # Print plan without side effects
+./deploy-testnet.sh --check    # Read-only tools and Testnet health checks
+./deploy-testnet.sh --deploy   # Deploy/resume and configure the local app
+```
+
+Requires Stellar CLI 28.0.0+, Node 22.12+ and the pinned Rust toolchain. It creates a custom test USDC asset and mock oracle, uses Keychain-backed identities and saves progress in Git-ignored `.testnet-deployment/`. See [Mac deployment instructions](@stellar-options-dev-brief/MAC_TESTNET_SCRIPT.md) for prerequisites, Freighter funding, fixture observations and retry behavior.
+
 SEO is configured for `https://steptionprotocol.com`. The site includes per-page metadata and canonical URLs, an OG/Twitter image, FAQ and publisher structured data, sitemap, robots policy, `llms.txt`, API discovery headers and Markdown negotiation. Search and AI answers are permitted; AI training is disallowed by Content Signals. Development and preview deployments are noindex; production indexes the homepage, learning page and API docs.
 
 Use the supplied `npm start` command for production. Its Node server preserves `Vary: Accept` alongside Next's own cache headers. Running `next start` directly bypasses that fix. See [SEO and agent setup](@stellar-options-dev-brief/SEO_GEO.md) for hosting, Search Console and validation instructions.
